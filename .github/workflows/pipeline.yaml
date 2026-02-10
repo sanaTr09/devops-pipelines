@@ -8,11 +8,15 @@ jobs:
   steps: 
     -name: checkout code
     uses: actions/checkout@v5
+
     -name: set up node 
     uses: actions/setup-node@v3
     with: 
       node-version: 16
+
     -name: install dependecies
     run: npm install
+
     -name: run tests
     run: npm test
+    
